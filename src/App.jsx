@@ -1,16 +1,12 @@
-
-import './App.css'
-import Login from './pages/auth/login'
-import Signup from './pages/auth/Signup'
-
-function App() {
-  
+import "./App.css";
+import Signup from "./pages/auth/Signup";
+function lApp() {
   return (
-   <>
- <Login/>
- <Signup/>
-   </>
-  )
+    <>
+      {/* <Login /> */}
+      <Signup />
+    </>
+  );
 }
 
-export default App
+export default App;
