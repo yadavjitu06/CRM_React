@@ -1,6 +1,6 @@
 import "./App.css";
 import Signup from "./pages/auth/Signup";
-function lApp() {
+function App() {
   return (
     <>
       {/* <Login /> */}
