@@ -10,6 +10,17 @@ return responce;}catch(error){
 }
 })
 
+
+
+export const signup=createAsyncThunk('/Auth/signup',async(data)=>{
+ try{ const responce =axiosInstance.post("auth/signup",data);
+return responce;
+}catch(error){
+  console.log("printing Error",error);
+// return error
+}
+})
+
 const initialState={
     role:localStorage.getItem("role")||"",
     data:JSON.parse(localStorage.getItem("data"))||undefined,
