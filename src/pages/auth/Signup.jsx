@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { signup } from "../../Redux/Slices/AuthSlice";
+import toast from "react-hot-toast";
 
 function Signup() {
   const dispatch = useDispatch();
@@ -66,8 +67,10 @@ function Signup() {
     const responce = await dispatch(signup(signupDetails));
     console.log(responce);
     if (responce.payload) {
+      // toast.success("successfully signed up");
       navigate("/login");
     } else {
+      // toast.error("something went wrong please try again")
       resetSignupState();
     }
   }
